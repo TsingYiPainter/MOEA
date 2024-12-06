@@ -12,7 +12,7 @@ lb = jnp.full(shape=(12,), fill_value=0)  # 下界：维度为2，值为 -32
 ub = jnp.full(shape=(12,), fill_value=1)   # 上界：维度为2，值为 32
 
 
-# 初始化 NSGA2
+# 初始化 pesa2
 pesa2 = algorithms.PESA2(
     lb=lb,              # 下界数组
     ub=ub,              # 上界数组
@@ -38,4 +38,4 @@ TestBench = [problems.numerical.MaF1(),
 ]
 
 for i in range(6):
-    EA(TestBench[i],nsga2,"NSGA-II","MaF{}".format(i+1))
+    EA(TestBench[i],pesa2,"NSGA-II","MaF{}".format(i+1))

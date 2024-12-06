@@ -64,9 +64,9 @@ def EA(mo_problem,mo_algorithm,algo_name,benchName):
                     )
 
     # 设置坐标轴标题和刻度
-    ax.set(xlabel='X',
-        ylabel='Y',
-        zlabel='Z',
+    ax.set(xlabel='f1',
+        ylabel='f2',
+        zlabel='f3',
         xticks=np.arange(0,math.ceil(max(x)),max(math.ceil(max(x))/4,0.2)),
         yticks=np.arange(0,math.ceil(max(y)),max(math.ceil(max(y))/4,0.2)),
         zticks=np.arange(0,math.ceil(max(z)),max(math.ceil(max(z))/4,0.2))
@@ -75,7 +75,7 @@ def EA(mo_problem,mo_algorithm,algo_name,benchName):
     # 调整视角
     angle = 45
     if benchName=="MaF6":
-        angle =75
+        angle =15
     ax.view_init(elev=20,    # 仰角
                 azim=angle    # 方位角
             )
